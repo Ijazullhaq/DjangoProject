@@ -1,0 +1,114 @@
+
+		=====================Django Full Course=============================
+
+	Django: is a high-level Python web framwork that encourages ripid Development 
+	and clean progatic design 
+
+	* Free & open source
+	* Large & Active Community
+	* Batteries Included
+
+  
+  Python and Django installed in your system 
+
+	Step1:- Check the django
+		-> Django-admin
+
+		Create Project in Django
+		-> django-admin startproject <project name>
+		-> cd <project name>
+
+---------------------Introduction to the first Django Project----------------
+
+  --Manage.py: to give commands related	to our django project.
+
+  Files: 
+
+	1. bolg/_init_.py: An empty file that tells Python that this directory 
+	   should be considered a python package.
+
+	2. blog/settings.py: Setting/configuration for our Django project
+
+	3. blog/url.py: Contain all urls for this django project.
+	
+	4. asgi.py and wsgi.py will not descuss letter it is related to deploye
+
+
+
+  * RunServer
+	-> python manage.py
+	-> python manage.py runserver
+	
+	it will succesfully show host server link 127.0.0.1:8000 
+	congratullation 
+
+	if yoy want to change port server any port number	
+	-> python manage.py runserver <port number>
+
+-------------------------------App in Django------------------------
+
+   Example consider a car as Django project that have more functionalities: 
+	1. Engine=app 2. Music=app  3.Player=app
+	4. Air Con..=app  5 Wheels=app
+ 
+	*also we have add some functions our project*.
+
+	Suppose we have add another car and add these functionality as well
+	this called reusablity.
+
+   App In Django 
+	
+	like: MyDj ---> Shop 
+	       |
+	       |
+	     Blog --> {Post} {Admin} {Auth}
+
+-------------------==Create Django App==-----------------------
+
+	-> python manage.py startapp post
+
+--------> 1. URLs & Views ?
+
+	What is URL:- URLs (Uniform Resource Locators) define how web requests are mapped to views. The urls.py 
+	file is used to route incoming HTTP requests to the appropriate view functions. 
+	home/   home Page
+	about/  About page
+	post/ postid/ Single Post Page
+
+	What is Views: It handle Request & Return Response. 
+	views contain logic needed to return a response. 
+	
+	* Function View (FBVs)
+
+	* Class View (CBVs)
+
+    home/  _________>>_________View____________>>___________ Home page
+	   |			 |  			    |
+	   |			 |			    |
+       Fetch posts	Check Authentication           Return Response
+	 from DB
+
+
+	1. Function Base View(FBV): A in Django is a simple function that handles HTTP requests and returns a response. 
+	It is one of the most commonly used methods to define views in Django.
+	
+	create first view:
+	
+	1:- view.py
+
+	from django.shortcuts import render
+ 	from django.http import HttpResponse
+
+	def helloworld(request): // request is HttpRequest
+		return HttpResponse("Hello World")
+
+	2. url.py 
+
+
+
+	
+
+
+
+
+
