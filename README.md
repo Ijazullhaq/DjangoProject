@@ -1,2 +1,2 @@
 # DjangoProject
-this is first django project 
+This the Django Project of backend developments in python
